@@ -1,0 +1,14 @@
+.primary-button {
+    width: 200px;
+    height: 60px;
+    border-radius: 8px;
+    border-style: none;
+    background: #F4CE14;
+    font-family: 'karla';
+    font-size: 18px;
+    line-height: 21px;
+    color: white;
+    border-width: '2%';
+    border-color: white;
+    font-weight: 400;
+}

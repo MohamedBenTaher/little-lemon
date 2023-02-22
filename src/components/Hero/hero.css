@@ -1,0 +1,20 @@
+.header-section {
+    padding: 7%;
+    height: 56vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #495E57;
+}
+
+.hero-image {
+    width: 375px;
+    height: 325px;
+    border-radius: 16px;
+}
+
+.hero-text {
+    color: #FFFFFF;
+    width: 70%;
+}

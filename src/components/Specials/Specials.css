@@ -1,0 +1,11 @@
+.specials-section {
+    height: 100vh;
+    padding: 5%;
+}
+
+.special-section-upper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

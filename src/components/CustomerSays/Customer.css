@@ -1,0 +1,11 @@
+.testimonals-section {
+    height: 100vh;
+    padding: 5%;
+}
+
+.testimonals-section-upper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

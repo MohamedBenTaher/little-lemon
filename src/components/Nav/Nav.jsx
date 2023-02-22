@@ -1,10 +1,9 @@
 import React from 'react'
 import styles from './Nav.css'
-import Logo from '../../assets/Logo'
+
 const Nav = () => {
     return (
         <nav style={styles}>
-            <Logo />
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>

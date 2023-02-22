@@ -1,0 +1,55 @@
+.card img {
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    max-width: 100%;
+    max-height: 50%;
+}
+
+.card-upper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 20em;
+    max-width: 20em;
+    height: 100%;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    padding-bottom: 2%;
+    align-items: center;
+
+}
+
+.card-body {
+    padding: 2%;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card-text {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #495E57;
+}
+
+.card-price {
+    color: #EE9972;
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
