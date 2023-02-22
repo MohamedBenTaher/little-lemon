@@ -5,6 +5,7 @@ import ButtonPrimary from '../Button/ButtonPrimary'
 import Specials from '../Specials/Specials'
 import styles from './Main.css'
 import CustomerSays from '../CustomerSays/CustomerSays'
+import Chicago from '../Chicago/Chicago'
 const Main = () => {
     return (
         <main style={styles}>
@@ -12,8 +13,7 @@ const Main = () => {
                 <Hero />
                 <Specials />
                 <CustomerSays />
-                <div className='info-section'>
-                </div>
+                <Chicago />
             </div>
 
         </main>

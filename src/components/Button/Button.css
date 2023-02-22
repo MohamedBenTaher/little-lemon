@@ -9,6 +9,36 @@
     line-height: 21px;
     color: white;
     border-width: '2%';
+    color: white;
+    border: 2px solid white;
+    font-weight: 400;
+}
+
+.primary-button:hover {
+    width: 200px;
+    height: 60px;
+    border-radius: 8px;
+    border-style: none;
+    background: #F67458;
+    font-family: 'karla';
+    font-size: 18px;
+    line-height: 21px;
+    color: white;
+    border: 2px solid white;
+    font-weight: 400;
+}
+
+.primary-button:active {
+    width: 200px;
+    height: 60px;
+    border-radius: 8px;
+    border-style: none;
+    background: #495E57;
+    font-family: 'karla';
+    font-size: 18px;
+    line-height: 21px;
+    color: white;
+    border: 2px solid white;
     border-color: white;
     font-weight: 400;
 }

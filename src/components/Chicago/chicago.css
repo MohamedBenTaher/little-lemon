@@ -1,0 +1,45 @@
+.info-section {
+    padding: 7%;
+    height: 56vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.info-image1 {
+    width: 272px;
+    height: 338px;
+    position: relative;
+    left: 30%;
+    top: 30%;
+    border-width: 10%;
+    border-color: white;
+}
+
+.info-image2 {
+    width: 272px;
+    height: 338px;
+    z-index: 2;
+    border-color: white;
+    border-width: 10020px;
+}
+
+.img-container {
+
+    height: 56vh;
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: start;
+    padding-bottom: 5%;
+}
+
+.info-text {
+    width: 70%;
+}
+
+.info {
+    width: 50%;
+}
