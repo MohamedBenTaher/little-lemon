@@ -1,8 +1,17 @@
 import React from 'react'
-
-const BookingPage = () => {
+import styles from './bookingpage.css'
+import BookingForm from '../BookingForm/BookingForm'
+const BookingPage = ({ bookings, dispatch, formData, handleChange, handleSubmit, availableTimes }) => {
+    console.log('dispatch', dispatch)
     return (
-        <div>BookingPage</div>
+        <div style={styles}>
+            <BookingForm bookings={bookings}
+                dispatch={dispatch}
+                formData={formData}
+                handleChange={handleChange}
+                availableTimes={availableTimes}
+                handleSubmit={handleSubmit} />
+        </div>
     )
 }
 
