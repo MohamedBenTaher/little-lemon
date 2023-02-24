@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import styles from './bookingform.css'
 const BookingForm = ({ bookings, dispatch, formData, handleChange, handleSubmit, availableTimes }) => {
-    console.log('bookings', bookings)
+    console.log('availableTimes in form', availableTimes)
     return (
         <div style={styles}>
+            <div>
+                <h2 id='booking-title-id'>Book a Table</h2>
+            </div>
             <form onSubmit={handleSubmit}>
                 <fieldset style={{ display: 'flex', maxWidth: '20%', flexDirection: 'column' }} >
                     <label htmlFor="res-date">Choose date</label>
@@ -14,7 +17,7 @@ const BookingForm = ({ bookings, dispatch, formData, handleChange, handleSubmit,
                         onChange={(e) => handleChange(e)} />
                     <label htmlFor="res-time">Choose time</label>
                     <select id="res-time " name='time' value={formData.time} onChange={(e) => handleChange(e)} >
-                        {availableTimes.map((time) => (
+                        {availableTimes?.map((time) => (
                             <option key={time} value={time}>
                                 {time}
                             </option>
