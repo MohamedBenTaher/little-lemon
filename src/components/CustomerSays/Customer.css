@@ -1,6 +1,7 @@
 .testimonals-section {
     height: 60vh;
     padding: 5%;
+    width: '100%';
     background-color: #FBDABB;
 }
 
@@ -8,5 +9,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: '100%';
     justify-content: center;
+}
+
+.testimonals-card-section {
+    display: flex;
+    flex-direction: row;
+    width: '100%';
+    align-items: flex-start;
+    justify-content: space-evenly;
 }

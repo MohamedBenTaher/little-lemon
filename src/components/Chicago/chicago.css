@@ -5,7 +5,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-
 }
 
 .info-image1 {
@@ -14,8 +13,9 @@
     position: relative;
     left: 30%;
     top: 30%;
-    border-width: 10%;
+
     border-color: white;
+    border-radius: 16px;
 }
 
 .info-image2 {
@@ -23,7 +23,7 @@
     height: 338px;
     z-index: 2;
     border-color: white;
-    border-width: 10020px;
+    border-radius: 16px;
 }
 
 .img-container {
@@ -37,9 +37,5 @@
 }
 
 .info-text {
-    width: 70%;
-}
-
-.info {
-    width: 50%;
+    width: 40%;
 }
