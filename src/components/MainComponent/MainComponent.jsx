@@ -97,7 +97,7 @@ const MainComponent = ({ }) => {
                 <Route path='/booking-confirmed' element={<ConfirmedBooking navigate={navigate} />} />
             </Routes>
 
-            <Footer />
+            <Footer navigate={navigate} />
         </>
     )
 }

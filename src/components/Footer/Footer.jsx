@@ -1,14 +1,17 @@
 import React from 'react'
 import styles from './Footer.css'
 import Logo from '../../assets/Logo'
+import footerLogo from '../../assets/footerLogo.jpg'
 import { Link } from 'react-router-dom'
-const Footer = () => {
+const Footer = ({ navigate }) => {
     return (
         <footer style={styles}>
             <div className='footer'>
-                <div className='logo'>
-                    <Logo />
-                </div>
+                <a onClick={() => navigate('/')}>
+                    <div className='logo'>
+                        <img src={footerLogo} />
+                    </div>
+                </a>
                 <ul className='first'>
                     <li>Doormat</li>
                     <li>Navigation</li>
