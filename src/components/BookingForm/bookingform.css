@@ -16,7 +16,7 @@
 
 .form {
     width: 80%;
-    height: 80vh;
+    height: 30em;
     border-radius: 16px;
     font-family: 'karla';
 }
@@ -41,4 +41,53 @@ input[type=number] {
     border-radius: 4px;
     box-sizing: border-box;
     font-family: 'karla';
+}
+
+.primary-button {
+    width: 200px;
+    height: 60px;
+    border-radius: 8px;
+    border-style: none;
+    background: #F4CE14;
+    font-family: 'karla';
+    font-size: 18px;
+    line-height: 21px;
+    color: white;
+    border-width: '2%';
+    color: white;
+    border: 2px solid white;
+    font-weight: 400;
+}
+
+.primary-button:hover {
+    width: 200px;
+    height: 60px;
+    border-radius: 8px;
+    border-style: none;
+    background: #F67458;
+    font-family: 'karla';
+    font-size: 18px;
+    line-height: 21px;
+    color: white;
+    border: 2px solid white;
+    font-weight: 400;
+}
+
+.primary-button:active {
+
+    height: 60px;
+    border-radius: 8px;
+    border-style: none;
+    background: #495E57;
+    font-family: 'karla';
+    font-size: 18px;
+    line-height: 21px;
+    color: white;
+    border: 2px solid white;
+    border-color: white;
+    font-weight: 400;
+}
+
+.error {
+    color: rgb(165, 13, 13);
 }

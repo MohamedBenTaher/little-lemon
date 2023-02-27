@@ -14,7 +14,9 @@ const Hero = () => {
                         Our restaurant is known for serving up some of the best Asian fusion dishes in town,
                         all made with the freshest and highest quality ingredients.
                     </p>
-                    <ButtonPrimary content={'Reserve a Table'} />
+                    <div className='btn'>
+                        <ButtonPrimary content={'Reserve a Table'} />
+                    </div>
                 </div>
                 <div>
                     <img src={imageSrc} alt='food' className='hero-image' />

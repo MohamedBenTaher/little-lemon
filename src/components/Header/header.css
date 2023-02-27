@@ -1,6 +1,29 @@
 .nav-section {
     height: 15vh;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+
+/* Adjust the card width and margin for smaller screens */
+@media (max-width: 767px) {
+    .nav-section {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+/* Adjust the card width and margin for even smaller screens */
+@media (max-width: 479px) {
+    .nav-section {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
 }

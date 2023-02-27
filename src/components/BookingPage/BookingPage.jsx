@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './bookingpage.css'
 import BookingForm from '../BookingForm/BookingForm'
-const BookingPage = ({ bookings, dispatch, formData, handleChange, handleSubmit, availableTimes }) => {
+const BookingPage = ({ navigate, bookings, dispatch, formData, handleChange, handleSubmit, availableTimes, handleFocus, errors }) => {
     console.log('dispatch', dispatch)
     return (
         <div style={styles}>
@@ -10,7 +10,11 @@ const BookingPage = ({ bookings, dispatch, formData, handleChange, handleSubmit,
                 formData={formData}
                 handleChange={handleChange}
                 availableTimes={availableTimes}
-                handleSubmit={handleSubmit} />
+                handleSubmit={handleSubmit}
+                errors={errors}
+                navigate={navigate}
+                handleFocus={handleFocus}
+            />
         </div>
     )
 }

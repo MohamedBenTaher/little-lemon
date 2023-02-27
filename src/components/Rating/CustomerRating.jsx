@@ -8,7 +8,7 @@ const CustomerRating = ({ name, rating, review, imgSrc }) => {
     ));
     return (
         <div style={styles}>
-            <div class="rating-card">
+            <div className="rating-card">
 
                 <div className="rating-card-body">
                     {ratingStars}

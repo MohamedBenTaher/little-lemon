@@ -5,7 +5,7 @@ import DeliveryIcon from '../../assets/Delivery.svg'
 const SpecialsCard = ({ title, price, description, imgSrc }) => {
     return (
         <div style={styles}>
-            <div class="card">
+            <div className="card">
                 <img src={imgSrc} alt="Example Image" />
                 <div className="card-body">
                     <div className='card-upper'>
@@ -16,7 +16,7 @@ const SpecialsCard = ({ title, price, description, imgSrc }) => {
                     <div ><a href='/' className='card-link' >Order Delivery <image src={DeliveryIcon} /></a></div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

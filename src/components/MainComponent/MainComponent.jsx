@@ -38,29 +38,112 @@ export function initializeTimes() {
 const MainComponent = ({ }) => {
 
     const [bookings, setbookings] = useState([])
+    const [errors, setErrors] = useState({
+        date: { message: 'please select a date', active: false },
+        guests: { message: 'the number of guests shoild be more 0 and less than 15', active: false },
+        occasion: { message: 'Time is required', active: false },
+        time: { message: 'time isn`t avaliable for the chosen day', active: false },
+    });
+
     const navigate = useNavigate()
     const [formData, setFormData] = useState({
-        date: new Date(),
+        date: '',
         time: '',
         guests: 0,
         occasion: ''
     });
-    const submitForm = (formData) => {
-
-        if (submitAPI(formData)) {
-            navigate('/booking-confirmed/');
+    const validateForm = () => {
+        let errors = {}
+        let isValid = true;
+        if (formData.guests.trim() === '') {
+            errors.date = 'guests is required';
+            isValid = false;
         }
-        else {
-            navigate('/booking')
+        else if (formData.guests > 14) {
+            errors.date = 'guests should be less than 15';
+            isValid = false;
+        }
+
+        if (formData.time.trim() === '') {
+            errors.time = 'Time is required';
+            isValid = false;
+        } else if (!availableTimes.includes(formData.time)) {
+            errors.time = 'Selected time is not available';
+            isValid = false;
+        }
+
+        setErrors(errors);
+
+        return isValid;
+    };
+    const handleSubmit = async (values, { setSubmitting, setErrors }) => {
+        try {
+            console.log('submission')
+            console.log('values', values)
+            const response = submitAPI(values);
+            if (response) {
+                navigate('/booking-confirmed');
+            } else {
+                setErrors(response.errors);
+            }
+        } catch (error) {
+            console.error(error);
+            setSubmitting(false);
+            setErrors({ submit: 'An error occurred. Please try again later.' });
+        }
+    };
+
+
+    const validateField = (name, value) => {
+        if (name === 'guests') {
+            if (value == 0 || value > 14) {
+                setErrors((errors) => ({ ...errors, guests: { ...errors.guests, active: true } }))
+            }
+            else {
+                setErrors((errors) => ({ ...errors, guests: { ...errors.guests, active: false } }))
+            }
+        }
+        if (name === 'date') {
+            if (value == '') {
+                setErrors((errors) => ({ ...errors, date: { ...errors.date, active: true } }))
+            }
+            else {
+                setErrors((errors) => ({ ...errors, date: { ...errors.date, active: false } }))
+            }
+        }
+        if (name === 'time') {
+            if (value === '') {
+
+                setErrors((errors) => ({ ...errors, time: { ...errors.time, active: true } }))
+            } else if (!availableTimes.includes(value)) {
+                setErrors((errors) => ({ ...errors, time: { ...errors.time, active: true } }))
+            }
+            else {
+                setErrors((errors) => ({ ...errors, time: { ...errors.time, active: false } }))
+            }
+        }
+        if (name === 'occasion') {
+            if (value === '') {
+                setErrors((errors) => ({ ...errors, occasion: { messsage: 'occasion is required', active: true } }))
+            }
+            else {
+                setErrors((errors) => ({ ...errors, occasion: { messsage: 'occasion is required', active: false } }))
+            }
         }
     }
     const handleChange = (e) => {
         const name = e.target.name;
         const value = e.target.value;
+        validateField(name, value)
         setFormData({ ...formData, [name]: value })
         if (name === 'date') {
             dispatch({ type: 'UPDATE_TIMES', payload: value });
         }
+    };
+    const handleFocus = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        validateField(name, value)
     };
     const [availableTimes, dispatch] = useReducer(updateTimesReducer, [], initializeTimes);
 
@@ -74,11 +157,13 @@ const MainComponent = ({ }) => {
                 <Route path='/booking' element={<BookingPage
                     formData={formData}
                     handleChange={handleChange}
-                    handleSubmit={submitForm}
+                    handleFocus={handleFocus}
+                    handleSubmit={handleSubmit}
                     bookings={bookings}
                     availableTimes={availableTimes}
                     dispatch={dispatch}
                     navigate={navigate}
+                    errors={errors}
                 />} />
                 <Route path='/booking-confirmed' element={<ConfirmedBooking navigate={navigate} />} />
             </Routes>

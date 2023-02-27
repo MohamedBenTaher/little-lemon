@@ -1,6 +1,6 @@
 .header-section {
     padding: 7%;
-    height: 56vh;
+    min-height: 400px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -9,12 +9,39 @@
 }
 
 .hero-image {
-    width: 375px;
-    height: 325px;
+    width: 100%;
+    max-width: 375px;
+    height: auto;
     border-radius: 16px;
+    margin-bottom: 40px;
 }
 
 .hero-text {
     color: #FFFFFF;
-    width: 70%;
+    width: 100%;
+    max-width: 600px;
+    text-align: start;
+}
+
+@media (max-width: 767px) {
+    .testimonial-card {
+        flex-basis: calc(50% - 20px);
+    }
+
+    .header-section {
+        padding: 7%;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: #495E57;
+    }
+}
+
+/* Adjust the card width and margin for even smaller screens */
+@media (max-width: 479px) {
+    .testimonial-card {
+        flex-basis: calc(100% - 20px);
+    }
 }

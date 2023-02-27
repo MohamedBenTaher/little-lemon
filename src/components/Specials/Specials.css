@@ -1,18 +1,75 @@
+/* Set a minimum height for the specials section */
 .specials-section {
-    height: 100vh;
+    min-height: 500px;
     padding: 5%;
+    padding-bottom: 10%;
 }
 
+/* Use flexbox to center the content vertically and horizontally */
 .special-section-upper {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
+/* Use flexbox to create a responsive row of cards */
 .card-section {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-evenly;
+}
+
+/* Set the width of each card to be responsive */
+.card {
+    flex-basis: calc(33.33% - 20px);
+    margin-top: 10%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust the card width and margin for smaller screens */
+@media (max-width: 767px) {
+    .card {
+        flex-basis: calc(50% - 20px);
+        margin-bottom: 3%;
+    }
+
+    .special-section-upper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+}
+
+/* Adjust the card width and margin for even smaller screens */
+@media (max-width: 479px) {
+    .card {
+        flex-basis: calc(100% - 20px);
+        margin-bottom: 3%;
+    }
+
+    .special-section-upper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
 }
