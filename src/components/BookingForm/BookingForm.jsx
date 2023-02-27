@@ -9,7 +9,7 @@ const BookingForm = ({ navigate, formData, handleChange, handleSubmit, available
     console.log('formData', formData)
     return (
         <div style={styles}>
-
+            <h3 className='heading'>Book a Table</h3>
             <Formik
                 initialValues={{ date: '', guests: '', ocassion: '', time: '' }}
                 validate={(values) => {
@@ -37,51 +37,55 @@ const BookingForm = ({ navigate, formData, handleChange, handleSubmit, available
                         <Form className='form' data-testid="form">
                             <label htmlFor='date'>
                                 Date:
-                                <Field type="date" name="date" />
-                                <ErrorMessage name="date" render={(message) => (
-                                    <div className="error">
-                                        {message}
-                                    </div>
-                                )} />
                             </label>
+                            <Field type="date" name="date" />
+                            <ErrorMessage name="date" render={(message) => (
+                                <div className="error">
+                                    {message}
+                                </div>
+                            )} />
+
                             <label htmlFor='guests'>
-                                Geusts:
-                                <Field type="number" name="guests" />
-                                <ErrorMessage name="guests" render={(message) => (
-                                    <div className="error">
-                                        {message}
-                                    </div>
-                                )} />
+                                Guests:
                             </label>
+                            <Field type="number" name="guests" />
+                            <ErrorMessage name="guests" render={(message) => (
+                                <div className="error">
+                                    {message}
+                                </div>
+                            )} />
+
                             <label htmlFor='occasion'>
                                 Ocassion:
-                                <Field as="select" name="ocassion" >
-                                    <option value="">Select a time</option>
-                                    <option value="Anniversary">Anniversary</option>
-                                    <option value="Birthday">Birthday</option>
-                                </Field>
-                                <ErrorMessage name="ocassion" render={(message) => (
-                                    <div className="error">
-                                        {message}
-                                    </div>
-                                )} />
                             </label>
+                            <Field as="select" name="ocassion" data-testid="occasion-input">
+                                <option value="">Select a time</option>
+                                <option value="Anniversary">Anniversary</option>
+                                <option value="Birthday">Birthday</option>
+                            </Field>
+                            <ErrorMessage name="ocassion" render={(message) => (
+                                <div className="error">
+                                    {message}
+                                </div>
+                            )} />
+
                             <label htmlFor='time'>
                                 Time:
-                                <Field as="select" name="time">
-                                    <option value="">Select a time</option>
-                                    {availableTimes.map((time, index) => (
-                                        <option key={time} value={time}>
-                                            {time}
-                                        </option>
-                                    ))}
-                                </Field>
-                                <ErrorMessage name="time" render={(message) => (
-                                    <div className="error">
-                                        {message}
-                                    </div>
-                                )} />
                             </label>
+                            <Field as="select" name="time" data-testid="time-input">
+                                <option value="">Select a time</option>
+                                {availableTimes.map((time, index) => (
+                                    <option key={time} value={time}>
+                                        {time}
+                                    </option>
+                                ))}
+                            </Field>
+                            <ErrorMessage name="time" render={(message) => (
+                                <div className="error">
+                                    {message}
+                                </div>
+                            )} />
+
                             <button type="submit" disabled={isSubmitting} className={'primary-button'}>
                                 Make a Reservation
                             </button>

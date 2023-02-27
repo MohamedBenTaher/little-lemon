@@ -91,3 +91,8 @@ input[type=number] {
 .error {
     color: rgb(165, 13, 13);
 }
+
+.heading {
+    display: flex;
+    margin-left: 10%;
+}

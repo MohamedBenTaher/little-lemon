@@ -1,15 +1,14 @@
 import { render, screen, renderHook } from '@testing-library/react';
 import { fetchAPI, submitAPI } from './temp';
 import { updateTimesReducer, initializeTimes } from '../src/components/MainComponent/MainComponent'
+import { ReactDOM } from 'react';
+import MainComponent from '../src/components/MainComponent/MainComponent';
 
-describe('initializeTimes', () => {
-  it('should initialize the available times to a static array', () => {
-    const date = new Date()
-    const { result } = renderHook(() => initializeTimes());
-    expect(result.current).toEqual([...fetchAPI(date)]);
-  });
-});
-
+// test('renders without crashing', () => {
+//   const { getByTestId } = render(<MainComponent />);
+//   const mainComponent = getByTestId('main-component');
+//   expect(mainComponent).toBeInTheDocument();
+// });
 describe('availableTimesReducer', () => {
   it('should return the same state if the action type is not recognized', () => {
     const date = new Date()

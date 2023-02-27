@@ -73,6 +73,20 @@
     justify-content: start;
     padding-left: 5%;
     width: 80%;
+    text-decoration: none;
+    color: black;
+}
+
+.card-link:hover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding-left: 5%;
+    width: 80%;
+    text-decoration: none;
+    color: #495E57;
+
 }
 
 .del-img {

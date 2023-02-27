@@ -3,7 +3,7 @@ import MainComponent from './components/MainComponent/MainComponent';
 function App() {
   return (
 
-    <MainComponent />
+    <MainComponent data-testid={'main-component'} />
 
   );
 }
