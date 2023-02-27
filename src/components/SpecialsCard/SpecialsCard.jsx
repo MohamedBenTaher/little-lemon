@@ -13,7 +13,14 @@ const SpecialsCard = ({ title, price, description, imgSrc }) => {
                         <p className='card-price'>$ {price}</p>
                     </div>
                     <p className="card-text">{description}</p>
-                    <div ><a href='/' className='card-link' >Order Delivery <image src={DeliveryIcon} /></a></div>
+                    <div className='delivery'>
+                        <a href='/' className='card-link' >
+                            Order Delivery
+                            <div className='del-img'>
+                                <img src={DeliveryIcon} className='img' />
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div >

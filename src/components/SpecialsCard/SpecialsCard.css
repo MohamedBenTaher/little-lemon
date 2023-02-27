@@ -1,7 +1,7 @@
 .card img {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
-    width: 20em;
+    width: 100%;
     max-height: 193px;
 }
 
@@ -10,18 +10,18 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 20em;
-    height: 80%;
+    height: 90%;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
-    padding-bottom: 2%;
     align-items: center;
     margin-bottom: 5%;
 
@@ -44,6 +44,7 @@
     color: #495E57;
     width: 80%;
     padding: 2%;
+    height: 8em;
 }
 
 .card-price {
@@ -53,4 +54,30 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
+}
+
+.delivery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding-left: 5%;
+    margin-bottom: 1em;
+
+}
+
+.card-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding-left: 5%;
+    width: 80%;
+}
+
+.del-img {
+    width: 10%;
+    height: 2em;
+    margin-left: 5%;
+    display: flex;
 }

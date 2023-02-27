@@ -2,11 +2,11 @@ import React from 'react'
 import imageSrc from '../../assets/restauranfood.jpg';
 import ButtonPrimary from '../Button/ButtonPrimary';
 import styles from './hero.css'
-const Hero = () => {
+const Hero = ({ navigate }) => {
     return (
         <div styles={styles} >
             <div className='header-section'>
-                <div>
+                <div className='left'>
                     <h1>Little Lemon</h1>
                     <h3 style={{ color: '#FFF' }}>chicago</h3>
                     <p className='hero-text'>
@@ -15,7 +15,7 @@ const Hero = () => {
                         all made with the freshest and highest quality ingredients.
                     </p>
                     <div className='btn'>
-                        <ButtonPrimary content={'Reserve a Table'} />
+                        <ButtonPrimary content={'Reserve a Table'} navigate={navigate} />
                     </div>
                 </div>
                 <div>

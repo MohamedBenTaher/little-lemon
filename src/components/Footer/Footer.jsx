@@ -9,7 +9,7 @@ const Footer = () => {
                 <div className='logo'>
                     <Logo />
                 </div>
-                <ul>
+                <ul className='first'>
                     <li>Doormat</li>
                     <li>Navigation</li>
                     <li> <Link to='/' ><a>Home</a></Link></li>
@@ -20,13 +20,13 @@ const Footer = () => {
                     <li> <Link to='/' ><a>Login</a></Link></li>
                 </ul>
 
-                <ul>
+                <ul className='second'>
                     <li>Contact</li>
                     <li><a href="#">Phone Number</a></li>
                     <li><a href="#">Address</a></li>
                     <li><a href="#">email</a></li>
                 </ul>
-                <ul>
+                <ul className='second'>
                     <li>Social Media Links</li>
                     <li><a href="#">Phone Number</a></li>
                     <li><a href="#">Address</a></li>

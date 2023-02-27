@@ -6,11 +6,11 @@ import Specials from '../Specials/Specials'
 import styles from './Main.css'
 import CustomerSays from '../CustomerSays/CustomerSays'
 import Chicago from '../Chicago/Chicago'
-const Main = () => {
+const Main = ({ navigate }) => {
     return (
         <main style={styles}>
             <div className='Main-section'>
-                <Hero />
+                <Hero navigate={navigate} />
                 <Specials />
                 <CustomerSays />
                 <Chicago />

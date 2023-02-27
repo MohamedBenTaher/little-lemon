@@ -23,7 +23,7 @@ const BookingForm = ({ navigate, formData, handleChange, handleSubmit, available
                         errors.guests = 'Please choose a valid value between 0 and 15';
                     }
                     if (!values.ocassion) {
-                        errors.ocassion = 'Ocasion is required';
+                        errors.ocassion = 'Occasion is required';
                     }
                     if (!values.time) {
                         errors.time = 'Time is required';
@@ -34,8 +34,8 @@ const BookingForm = ({ navigate, formData, handleChange, handleSubmit, available
             >
                 {({ isSubmitting }) => (
                     <div className='form-container'>
-                        <Form className='form'>
-                            <label>
+                        <Form className='form' data-testid="form">
+                            <label htmlFor='date'>
                                 Date:
                                 <Field type="date" name="date" />
                                 <ErrorMessage name="date" render={(message) => (
@@ -44,7 +44,7 @@ const BookingForm = ({ navigate, formData, handleChange, handleSubmit, available
                                     </div>
                                 )} />
                             </label>
-                            <label>
+                            <label htmlFor='guests'>
                                 Geusts:
                                 <Field type="number" name="guests" />
                                 <ErrorMessage name="guests" render={(message) => (
@@ -53,8 +53,8 @@ const BookingForm = ({ navigate, formData, handleChange, handleSubmit, available
                                     </div>
                                 )} />
                             </label>
-                            <label>
-                                Occasion:
+                            <label htmlFor='occasion'>
+                                Ocassion:
                                 <Field as="select" name="ocassion" >
                                     <option value="">Select a time</option>
                                     <option value="Anniversary">Anniversary</option>
@@ -66,8 +66,7 @@ const BookingForm = ({ navigate, formData, handleChange, handleSubmit, available
                                     </div>
                                 )} />
                             </label>
-
-                            <label>
+                            <label htmlFor='time'>
                                 Time:
                                 <Field as="select" name="time">
                                     <option value="">Select a time</option>
@@ -84,7 +83,7 @@ const BookingForm = ({ navigate, formData, handleChange, handleSubmit, available
                                 )} />
                             </label>
                             <button type="submit" disabled={isSubmitting} className={'primary-button'}>
-                                Submit
+                                Make a Reservation
                             </button>
                         </Form>
                     </div>
